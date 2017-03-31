@@ -1,10 +1,11 @@
-# CMB2 Field Type: Google Maps
+# A custom Google MAP field - using with CMB2 Field Type
 
 ## Description
 
 Google Maps field type for [CMB2](https://github.com/WebDevStudios/CMB2).
 
-The `pw_map` field stores the latitude/longitude values which you can then use to display a map in your theme.
+* The `pw_map` field stores the latitude/longitude values which you can then use to display a map in your theme.
+* Add Info Window for adding content easily by wordpress admin.
 
 ## Installation
 
@@ -29,11 +30,11 @@ array(
 	// 'split_values' => true, // Save latitude and longitude as two separate fields
 ),
 ```
+#### Update:
+* Add custom field google map.
+* Integrate with gmap.js (to display map in frontend) by using custom field data.
 
 #### Extra Parameters:
 
 * `split_values` Save the latitude/longitude values into two custom fields, they will be stored as `$id . '_latitude'` and `$id . '_longitude'`.
 
-## Screenshot
-
-![Image](screenshot-1.png?raw=true)

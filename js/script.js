@@ -8,7 +8,7 @@
 	});
 
 	function initializeMap( mapInstance ) {
-		var currentAddress = mapInstance.find('.current-address');
+		
 		var searchInput = mapInstance.find( '.pw-map-search' );
 		var mapCanvas = mapInstance.find( '.pw-map' );
 		var latitude = mapInstance.find( '.pw-map-latitude' );
@@ -17,16 +17,12 @@
 		var zoom = 5;
 
 		// hidden text field for showing current address
-		currentAddress.attr('readonly', 'readonly');
-		searchInput.on('change keypress input', function() {
-		   //var textStore = searchInput.val();
-			 //currentAddress.val(textStore);
-		});
+		
 
 		// If we have saved values, let's set the position and zoom level
 		if ( latitude.val().length > 0 && longitude.val().length > 0 ) {
 			latLng = new google.maps.LatLng( latitude.val(), longitude.val() );
-			zoom = 18;
+			zoom = 17;
 		}
 
 		// Map
@@ -83,8 +79,6 @@
 		google.maps.event.addListener( marker, 'drag', function() {
 			latitude.val( marker.getPosition().lat() );
 			longitude.val( marker.getPosition().lng() );
-			console.log(marker.getPosition());
-			//currentAddress.val(marker.formatted_address);
 		});
 
 		maps.push( map );

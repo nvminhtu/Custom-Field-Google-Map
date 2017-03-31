@@ -32,20 +32,6 @@ class PW_CMB2_Field_Google_Maps {
 	public function render_pw_map( $field, $field_escaped_value, $field_object_id, $field_object_type, $field_type_object ) {
 		$this->setup_admin_scripts();
 
-		echo '<div class="show-map-address-area">';
-
-		echo '<p class="cmb2-metabox-description">Current Address</p>';
-		echo $field_type_object->input( array(
-			'type'       => 'text',
-			'name'       => $field->args('_name') . '[address]',
-			'value'      => isset( $field_escaped_value['address'] ) ? $field_escaped_value['address'] : '',
-			'class'      => 'large-text current-address',
-			'desc'       => '',
-		) );
-
-
-		echo '</div>';
-
 		echo '<p class="cmb2-metabox-description">Input your address / use maker to check your location</p>';
 
 		echo '<input type="text" class="large-text pw-map-search" id="' . $field->args( 'id' ) . '" />';
